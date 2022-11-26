@@ -1,21 +1,33 @@
 // import logo from "./logo.svg";
 import "./App.css";
-
 import "bootstrap/dist/css/bootstrap.min.css"; // importing bootstrap <css & js>
+import fantasy from "../src/books/fantasy.json"; // importing the fantasy books json
+
+import { Container, Row, Col } from "react-bootstrap";
+
 import WarningSign from "./components/WarningSign";
+import MyBadge from "./components/MyBadge";
+import SingleBook from "./components/SingleBook";
+import BookList from "./components/BookList.jsx";
 
 function App() {
   return (
     <div>
-      <WarningSign color="danger" />
+      <WarningSign color="danger" text="Alert Component" />
+      <MyBadge text="Badge Component" color="warning" className="p-1" />
+      <Container>
+        <Row>
+          <Col xs={3}>
+            <SingleBook fantasyBook={fantasy[0]} />
+          </Col>
+        </Row>
+      </Container>
+      <BookList fantasyBooks={fantasy} />
     </div>
   );
 }
 
 export default App;
-
-// 1. Create a component called WarningSign which receives a string as a prop.
-//    This text should be presented inside an Alert react-bootstrap component of type danger.
 
 // 2. Create a component called MyBadge which receives a string of text and a color as props.
 //    This component should render a Badge component with those properties.

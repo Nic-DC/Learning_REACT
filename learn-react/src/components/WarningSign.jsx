@@ -1,7 +1,10 @@
+// 1. Create a component called WarningSign which receives a string as a prop.
+//    This text should be presented inside an Alert react-bootstrap component of type danger.
+
 import { Alert } from "react-bootstrap";
 
-const WarningSign = ({ color }) => {
-  return <Alert variant={color}>Alert</Alert>;
+const WarningSign = ({ color, text }) => {
+  return <Alert variant={color}>{text}</Alert>;
 };
 
 /* ------------------------------------------

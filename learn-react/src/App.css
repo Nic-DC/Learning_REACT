@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+/* SINGLE BOOK */
+.truncate {
+  overflow: hidden;
+  /* Avoid text going to multiple lines */
+  white-space: nowrap;
+  /* Sets the ... once the text overflows */
+  text-overflow: ellipsis;
+}
+
+.line-clamp {
+  font-size: 0.55rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
