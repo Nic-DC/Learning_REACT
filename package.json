@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "bootstrap": "^4.6.1",
-    "date-fns": "^2.29.3",
-    "react-bootstrap": "^1.6.4"
-  }
-}
